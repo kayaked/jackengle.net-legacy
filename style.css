@@ -10,7 +10,20 @@ body {
     margin-top: 10%;
 }
 
+#je-fl {
+    display: flex;
+    flex-direction: row;
+}
+
 .je-h {
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.je-lnk {
+    width:40px;
+    height:40px;
+    background-size:contain;
+    display:flex;
+    flex-direction: column;
 }
