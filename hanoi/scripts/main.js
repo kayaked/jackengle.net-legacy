@@ -302,7 +302,7 @@ const foreground = new Sprite({
 const player = new Sprite({
     pos: {
         x: can.width/2 - playersprite.width/4-30, // Destination X pos for the sprite (splits the sprite in half per se to center)
-        y: can.height/2 - playersprite.height/2 // Destination Y pos for the sprite
+        y: can.height/2 - playersprite.height/2 + 30 // Destination Y pos for the sprite
     },
     image: playersprite,
     maxFrames: 2
