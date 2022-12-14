@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta property="og:title" content="HST103 Final Project"> 
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://github.com/kayaked/hst103-final">
+        <meta property="og:description" content="Video Game made for HST-103 via Canvas/JS/GH Pages">
+        <meta property="description" content="Video Game made for HST-103 via Canvas/JS/GH Pages">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="styles/index.css">
+        <title>Rat Hunt</title>
+    </head>
+    <body>
+       
+        
+        <audio src="assets\2019-12-09_-_Retro_Forest_-_David_Fesliyan.mp3" id="bgm" loop></audio>
+        <h1>The Great Hanoi Rat Hunt</h1>
+        <hr/>
+        <h4>Game and Graphics by Jack Engle, Jiarong Ding</h4>
+        <canvas id="main" style="display:none;" >
+        </canvas>
+        <div id="start-screen"  style="display:block;">
+            <a href="#" onclick="startGame()">Start Game</a>
+        </div>
+        <div id="gamebar">
+            <span class="gameval" id="money">0 cents</span>
+            <span class="gameval" id="rats">0 rats</span>
+            <span class="gameval" id="day">Day: 1</span>
+        </div>
+        <div id="dialogue-container"></div>
+        <h4>Controls:<br>Arrow Keys or WASD to move character in cardinal directions, Shift to interact, M to enable (and disable) the music.</h4>
+        <h4>Original graphic history by Professor Michael G. Vann. Pokemon Red Route 3 Theme Music by Junichi Masuda. All rights reserved.</h4>
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </body>
+</html>
