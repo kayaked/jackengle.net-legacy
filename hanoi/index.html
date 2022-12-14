@@ -16,14 +16,17 @@
        
         
         <audio src="assets\2019-12-09_-_Retro_Forest_-_David_Fesliyan.mp3" id="bgm" loop></audio>
+       
+        <div class="canvas">
         <h1>The Great Hanoi Rat Hunt</h1>
         <hr/>
         <h4>Game and Graphics by Jack Engle, Jiarong Ding</h4>
         <canvas id="main" style="display:none;" >
         </canvas>
-        <div id="start-screen"  style="display:block;">
-            <a href="#" onclick="startGame()">Start Game</a>
-        </div>
+        <div id="start-screen">
+                    <a href="#" onclick="startGame()">
+                        <div id="roll"><img class="image-main" src="assets/startButton.png"><img class="image-hover" src="assets/startButton1.png"></div></a>
+    </div>
         <div id="gamebar">
             <span class="gameval" id="money">0 cents</span>
             <span class="gameval" id="rats">0 rats</span>
@@ -31,7 +34,19 @@
         </div>
         <div id="dialogue-container"></div>
         <h4>Controls:<br>Arrow Keys or WASD to move character in cardinal directions, Shift to interact, M to enable (and disable) the music.</h4>
-        <h4>Original graphic history by Professor Michael G. Vann.</h4>
+        <h4>Original graphic history by Professor Michael G. Vann. Pokemon Red Route 3 Theme Music by Junichi Masuda. All rights reserved.</h4>
         <script type="text/javascript" src="scripts/main.js"></script>
+        </div>
+        <div class="text">
+        <h1>Hints:</h1>
+        <p>
+- At the west old quarter area there's a Vietnamese man who, starting Day 5 will give you a hint to use the breeder<br>
+- The rat breeder is to the north of the old quarter<br>
+- In the very southeast, starting day 5 a french guy will discourage you from talking to the rat supplier on the coastline<br>
+- On day 15 the days stop progressing and to end the game you talk to the rat buyer infront of the big palace<br>
+- Most other characters have their dialogue change every several days and will talk about things like the Bubonic plague, Dr. Yersin, the exposition, the rat hunt, their family, etc.<br>
+        </p>
+    </div>
+
     </body>
 </html>

@@ -22,7 +22,42 @@ body {
 ========================
 */
 #start-screen{
-    background-color: gray;
+    background-color: black;
+
     width : 1024px;
     height : 576px;
+}
+#start-screen a img{
+    margin-left: 19%;
+    margin-top: 13%;
+    align-items: center;
+    position: absolute;
+    width: 13%;
+    height: auto;
+}
+.canvas{
+    float:left;
+    width: 55%;
+}
+.text{
+    margin-top: 10%;
+    width:45%;
+    float:right;
+    position: relative;
+}
+.text p{
+    color:gray;
+    font-size: 1.5em;
+}
+#roll img.image-hover{
+    margin-left: 19%;
+    margin-top: 13%;
+    align-items: center;
+    position: absolute;
+    width: 13%;
+    height: auto;
+    opacity: 0;
+}
+#roll:hover img.image-hover{
+    opacity: 1;
 }
