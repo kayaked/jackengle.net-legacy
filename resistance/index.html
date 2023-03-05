@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta property="og:title" content="Resistance Bands"> 
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://jackengle.net/resistance/">
+        <meta property="og:description" content="Easily input and check resistance bands!">
+        <meta property="description" content="Easily input and check resistance bands!">
+        <meta name="keywords" content="resistance band chart resistor 4 5 6 bands colors color code">
+        <title>Resistance Bands</title>
+        <style>
+            .tg  {
+                border-collapse:collapse;border-spacing:0;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-mk6l{background-color:#000000;border-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
+            .tg .tg-kusv{background-color:#fffe65;border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-lto5{background-color:#f8a102;border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-266k{background-color:#9b9b9b;border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-xwmr{background-color:#34ff34;border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-qaof{background-color:#95602a;border-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
+            .tg .tg-kftd{background-color:#efefef;text-align:left;vertical-align:top}
+            .tg .tg-8z69{background-color:#bb65cd;border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-smvl{background-color:#fd6864;border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-i1q2{background-color:#34cdf9;border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-emdq{background-color:#cd9934;text-align:left;vertical-align:top}
+
+            #container {
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-bottom: 20%;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                min-height:100vh;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+
+            #cr {
+                position: fixed;
+                bottom: 0px;
+                right: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+        <h1>Resistor Color Codes</h1>
+        <canvas id="main"></canvas>
+        <h2>Color Code Chart Reference</h2>
+        <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-0pky">Band</th>
+                <th class="tg-0pky">1</th>
+                <th class="tg-0pky">2</th>
+                <th class="tg-0pky">3</th>
+                <th class="tg-0pky">4</th>
+                <th class="tg-0pky">5</th>
+                <th class="tg-0pky">6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-0pky">Color</td>
+                <td class="tg-0pky" colspan="3">Base Value (Ω)</td>
+                <td class="tg-0pky">Multiplier</td>
+                <td class="tg-0pky">Tolerance</td>
+                <td class="tg-0pky">Temp Coefficient</td>
+              </tr>
+              <tr>
+                <td class="tg-mk6l">black</td>
+                <td class="tg-mk6l">0</td>
+                <td class="tg-mk6l">0</td>
+                <td class="tg-mk6l">0</td>
+                <td class="tg-mk6l">10<sup>0</sup></td>
+                <td class="tg-mk6l">±20%</td>
+                <td class="tg-mk6l">250 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-qaof">brown</td>
+                <td class="tg-qaof">1</td>
+                <td class="tg-qaof">1</td>
+                <td class="tg-qaof">1</td>
+                <td class="tg-qaof">10<sup>1</sup></td>
+                <td class="tg-qaof">±1%</td>
+                <td class="tg-qaof">100 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-smvl">red</td>
+                <td class="tg-smvl">2</td>
+                <td class="tg-smvl">2</td>
+                <td class="tg-smvl">2</td>
+                <td class="tg-smvl">10<sup>2</sup></td>
+                <td class="tg-smvl">±2%</td>
+                <td class="tg-smvl">50 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-lto5">orange</td>
+                <td class="tg-lto5">3</td>
+                <td class="tg-lto5">3</td>
+                <td class="tg-lto5">3</td>
+                <td class="tg-lto5">10<sup>3</sup></td>
+                <td class="tg-lto5">±3%</td>
+                <td class="tg-lto5">15 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-kusv">yellow</td>
+                <td class="tg-kusv">4</td>
+                <td class="tg-kusv">4</td>
+                <td class="tg-kusv">4</td>
+                <td class="tg-kusv">10<sup>4</sup></td>
+                <td class="tg-kusv">±4%</td>
+                <td class="tg-kusv">25 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-xwmr">green</td>
+                <td class="tg-xwmr">5</td>
+                <td class="tg-xwmr">5</td>
+                <td class="tg-xwmr">5</td>
+                <td class="tg-xwmr">10<sup>5</sup></td>
+                <td class="tg-xwmr">±0.5%</td>
+                <td class="tg-xwmr">20 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-i1q2">blue</td>
+                <td class="tg-i1q2">6</td>
+                <td class="tg-i1q2">6</td>
+                <td class="tg-i1q2">6</td>
+                <td class="tg-i1q2">10<sup>6</sup></td>
+                <td class="tg-i1q2">±0.25%</td>
+                <td class="tg-i1q2">10 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-8z69">violet</td>
+                <td class="tg-8z69">7</td>
+                <td class="tg-8z69">7</td>
+                <td class="tg-8z69">7</td>
+                <td class="tg-8z69">10<sup>7</sup></td>
+                <td class="tg-8z69">±0.1%</td>
+                <td class="tg-8z69">5 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-266k">gray</td>
+                <td class="tg-266k">8</td>
+                <td class="tg-266k">8</td>
+                <td class="tg-266k">8</td>
+                <td class="tg-266k">10<sup>8</sup></td>
+                <td class="tg-266k">±0.05%</td>
+                <td class="tg-266k">1 ppm/K</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky">white</td>
+                <td class="tg-0pky">9</td>
+                <td class="tg-0pky">9</td>
+                <td class="tg-0pky">9</td>
+                <td class="tg-0pky">10<sup>9</sup></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+              </tr>
+              <tr>
+                <td class="tg-emdq">gold</td>
+                <td class="tg-emdq"></td>
+                <td class="tg-emdq"></td>
+                <td class="tg-emdq"></td>
+                <td class="tg-emdq">10<sup>-1</sup></td>
+                <td class="tg-emdq">±5%</td>
+                <td class="tg-emdq"></td>
+              </tr>
+              <tr>
+                <td class="tg-kftd">silver</td>
+                <td class="tg-kftd"></td>
+                <td class="tg-kftd"></td>
+                <td class="tg-kftd"></td>
+                <td class="tg-kftd">10<sup>-2</sup></td>
+                <td class="tg-kftd">±10%</td>
+                <td class="tg-kftd"></td>
+              </tr>
+            </tbody>
+        </table>
+        <h2>In A Schematic (WIP)</h2>
+        <p>Below is a set of resistors in series. In series like this, the current through each resistor is the same. They are connected/chained together along one path.</p>
+        <img src="series.png" style="padding-left:20%;padding-right:20%;"/>
+        <p>While in series, voltage is <strong>divided</strong> across resistors. Equation (1) demonstrates how this relationship works with R1 as an example. The equation involves dividing the resistance value in Ohms of the resistor in question by the sum of all series resistances. In this case, you divide 1kΩ by (2200 + 220 + 1000)Ω, then multiply the source voltage by this ratio. In our example, there is no power source, so be sure to analyze this for your own case.</p>
+        <p>Equation (2) demonstrates how to combine the resistances shown above. The sum of all resistance values in Ohms gives the specification for an equivalent resistor, which ideally has the same function as these.</p>
+        <img src="seriesproperties.png" style="padding-left:30%;padding-right:30%;"/>
+        <p>Shown below are resistors running in parallel with one another. Rather than connecting end-to-end, they flow in "split lanes" of the circuit and eventually rejoin together. The voltage across each resistor here is the same.</p>
+        <img src="parallel.png" style="padding-left:32%;padding-right:32%;"/>
+        <p>In parallel, unlike in series, <strong>current</strong> is divided between resistors. The relationship is similar to that of the series voltage division, but involves <strong>conductances</strong> instead of resistances. Conductance is the reciprocal value of resistance for each resistor, and its units are the Siemens (S) unit, equivalent to 1/Ω. It is represented by a G where resistance was represented by an R before.</p>
+        <p>Below are two sets of equations (3) and (4), which have the same numbers because they are the same equations simply represented differently. Shown by Equation (3), the current across R1 is the current source multiplied by the ratio of R1's conductance to the sum of all conductances. When finding this sum, be sure to convert all resistances to conductances before adding them together!</p>
+        <p>Equation (4) demonstrates how to ideally find the equivalent resistor for multiple in parallel with one another. The equivalent conductance for all resistors is the sum of their own conductance values. For our example, 1/220 + 1/1000 + 1/2200 gives the equivalent conductance for all three resistors. The equation below gives a more common and straightforward equation for R<sub>eq</sub>, showing the relationship between the parallel resistors and the equivalent counterpart.</p>
+        <img src="parallelproperties.png" style="padding-left: 28%; padding-right: 28%"/>
+        <br>
+        <p id="cr">© 2023 Jack Engle</p>
+        </div>
+        <script type="text/javascript">
+            // Main Resistor HTML5 Canvas Code.
+            const can = document.getElementById("main");
+            const ctx = can.getContext("2d");
+            can.width = 1024;
+            can.height = 288;
+        </script>
+    </body>
+</html>
