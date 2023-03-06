@@ -10,15 +10,31 @@
         <meta name="keywords" content="resistance band chart resistor 4 5 6 bands colors color code">
         <title>Resistance Bands</title>
         <style>
-            .tg  {
+            .tg {
                 border-collapse:collapse;border-spacing:0;
                 margin-left: 10%;
                 margin-right: 10%;
             }
-            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-              overflow:hidden;padding:10px 5px;word-break:normal;}
-            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg td {
+                border-color:black;
+                border-style:solid;
+                border-width:1px;
+                font-family:Arial, sans-serif;font-size:14px;
+                overflow:hidden;
+                padding:10px 5px;
+                word-break:normal;
+            }
+            .tg th {
+                border-color:black;
+                border-style:solid;
+                border-width:1px;
+                font-family:Arial, sans-serif;
+                font-size:14px;
+                font-weight:normal;
+                overflow:hidden;
+                padding:10px 5px;
+                word-break:normal;
+            }
             .tg .tg-mk6l{background-color:#000000;border-color:#000000;color:#ffffff;text-align:left;vertical-align:top}
             .tg .tg-kusv{background-color:#fffe65;border-color:inherit;text-align:left;vertical-align:top}
             .tg .tg-lto5{background-color:#f8a102;border-color:inherit;text-align:left;vertical-align:top}
@@ -31,6 +47,9 @@
             .tg .tg-smvl{background-color:#fd6864;border-color:inherit;text-align:left;vertical-align:top}
             .tg .tg-i1q2{background-color:#34cdf9;border-color:inherit;text-align:left;vertical-align:top}
             .tg .tg-emdq{background-color:#cd9934;text-align:left;vertical-align:top}
+            .tg .tg-0lax {
+                text-align: center; vertical-align: left; border: none;
+            }
 
             #container {
                 padding-left: 20%;
@@ -48,12 +67,71 @@
                 bottom: 0px;
                 right: 15px;
             }
+            .atg button {
+                padding: 15px;
+            }
+            #resistance {
+                text-align: center;
+                font-size: 300%;
+                margin-top: 0px;
+            }
+            .bandct {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                text-align: center;
+            }
+            
         </style>
     </head>
     <body>
         <div id="container">
         <h1>Resistor Color Codes</h1>
+        <table class="tg atg" style="margin: 15px;">
+            <thead>
+              <tr>
+                <td class="tg-0lax"><button class="ua bc0" onclick="movement('ArrowUp')">↑</button></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"><button class="ua bc1" onclick="movement('ArrowUp')">↑</button></td>
+                <td class="tg-0lax"><button class="ua bc2" onclick="movement('ArrowUp')">↑</button></td>
+                <td class="tg-0lax"><button class="ua bc3" onclick="movement('ArrowUp')">↑</button></td>
+                <td class="tg-0lax"><button class="ua bc4" onclick="movement('ArrowUp')">↑</button></td>
+                <td class="tg-0lax"><button class="ua bc5" onclick="movement('ArrowUp')">↑</button></td>
+                <td class="tg-0lax"><button class="ua bc6" onclick="movement('ArrowUp')">↑</button></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"><button class="" onclick="movement('ArrowRight')">→</button></td>
+              </tr>
+            </thead>
+        </table>
         <canvas id="main"></canvas>
+        <table class="tg atg" style="margin: 15px;">
+            <thead>
+              <tr>
+                <td class="tg-0lax"><button class="da bc0" onclick="movement('ArrowDown')">↓</button></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"><button class="da bc1" onclick="movement('ArrowDown')">↓</button></td>
+                <td class="tg-0lax"><button class="da bc2" onclick="movement('ArrowDown')">↓</button></td>
+                <td class="tg-0lax"><button class="da bc3" onclick="movement('ArrowDown')">↓</button></td>
+                <td class="tg-0lax"><button class="da bc4" onclick="movement('ArrowDown')">↓</button></td>
+                <td class="tg-0lax"><button class="da bc5" onclick="movement('ArrowDown')">↓</button></td>
+                <td class="tg-0lax"><button class="da bc6" onclick="movement('ArrowDown')">↓</button></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"></td>
+                <td class="tg-0lax"><button  onclick="movement('ArrowLeft')">←</button></td>
+              </tr>
+            </thead>
+        </table>
+        <p class="bandct">Currently Modifying: Band #</p>
+        <h2 class="bandct">4 band resistor</h2>
+        <h1 id="resistance"></h1>
         <h2>Color Code Chart Reference</h2>
         <table class="tg">
             <thead>
@@ -185,7 +263,8 @@
               </tr>
             </tbody>
         </table>
-        <h2>In A Schematic (WIP)</h2>
+        <h2>WIP: Temperature Coefficient and Tolerance Meaning, Ohm Value to Color Codes</h2>
+        <h2>Voltage and Current Division</h2>
         <p>Below is a set of resistors in series. In series like this, the current through each resistor is the same. They are connected/chained together along one path.</p>
         <img src="series.png" style="padding-left:20%;padding-right:20%;"/>
         <p>While in series, voltage is <strong>divided</strong> across resistors. Equation (1) demonstrates how this relationship works with R1 as an example. The equation involves dividing the resistance value in Ohms of the resistor in question by the sum of all series resistances. In this case, you divide 1kΩ by (2200 + 220 + 1000)Ω, then multiply the source voltage by this ratio. In our example, there is no power source, so be sure to analyze this for your own case.</p>
@@ -201,11 +280,283 @@
         <p id="cr">© 2023 Jack Engle</p>
         </div>
         <script type="text/javascript">
+            const BANDS4 = "#DCA773";
+            const BANDS3 = BANDS4;
+            const BANDS5 = "#73C2F2";
+            const BANDS6 = "#006336";
+            const BANDS = [BANDS3,BANDS4,BANDS5,BANDS6];
+            const resistorLength = 625;
+            const resistorHeight = 200;
             // Main Resistor HTML5 Canvas Code.
             const can = document.getElementById("main");
             const ctx = can.getContext("2d");
             can.width = 1024;
             can.height = 288;
+            ctx.beginPath();
+
+            var bands = [1,0,null, 2,5,null];
+            var bandCt = 4;
+            const colors = ["#000", "#95602A", "#F00", "#F8A102", "#FFFE65", "#34FF34", "#34CDF9", "#BB65CD", "#9B9B9B", "#FFF", "#CD9934", "#EFEFEF"];
+            var arrowIndex = 0;
+            var tols = [20,1,2,3,4,0.5,0.25,0.1,0.05,null,5,10];
+            var tcs = [250,100,50,15,25,20,10,5,1,null,null,null];
+
+            for(let i = 1; i <= 6; i++) {
+                let btns = document.getElementsByClassName("bc" + i);
+                for(let j = 0; j < btns.length; j++) {
+                    btns[j].style.visibility = "hidden";
+                }
+            }
+            function bandSwap(bands) {
+                if(parseInt(Number(bands)) != bands) return;
+                if(bands < 3 || bands > 6) return;
+                // Wire behind the resistor
+                ctx.fillStyle = "#999999";
+                ctx.fillRect(0, can.height/2 - resistorHeight / 20,can.width,resistorHeight/10);
+                ctx.fillStyle = BANDS[bands-3];
+                // Fills the main body of the resistor
+                ctx.fillRect(can.width / 2 - (resistorLength*3)/10,can.height / 2 - (resistorHeight*3) / 8,(resistorLength*3)/5,(resistorHeight*3)/4);
+                // Fills in the ends of the resistor
+                ctx.fillRect(can.width / 2 - resistorLength/2+1, can.height/2 - resistorHeight/2, resistorLength/5, resistorHeight);
+                ctx.fillRect(can.width / 2 + resistorLength/2 - resistorLength/5 - 1, can.height/2 - resistorHeight/2, resistorLength/5, resistorHeight);
+                drawBands();
+            }
+
+            function drawBand(num, value) {
+                let color = colors[value];
+                ctx.fillStyle = color;
+                if(num == 1) {
+                    ctx.fillRect(can.width / 2 - resistorLength/2 + resistorLength / 15, can.height/2 - resistorHeight/2, resistorLength/15, resistorHeight);
+                }
+                else if(num == 2) {
+                ctx.fillRect((can.width / 2 - (resistorLength*3)/12),can.height / 2 - (resistorHeight*3) / 8,resistorLength/15,(resistorHeight*3)/4);
+                }
+                else if(num == 3) {
+                ctx.fillRect((can.width / 2 - (resistorLength*3)/24),can.height / 2 - (resistorHeight*3) / 8,resistorLength/15,(resistorHeight*3)/4);
+                }
+                else if(num == 4) {
+                ctx.fillRect((can.width / 2 + (resistorLength*3)/24) - resistorLength/15,can.height / 2 - (resistorHeight*3) / 8,resistorLength/15,(resistorHeight*3)/4);
+                }
+                else if(num == 5) {
+                ctx.fillRect((can.width / 2 + (resistorLength*3)/12) - resistorLength/15,can.height / 2 - (resistorHeight*3) / 8,resistorLength/15,(resistorHeight*3)/4);
+                }
+                else if(num == 6) {
+                    ctx.fillRect(can.width / 2 + resistorLength/2 - 2*resistorLength / 15, can.height/2 - resistorHeight/2, resistorLength/15, resistorHeight);
+                }
+            }
+
+            function drawBands() {
+                for(let i = 0; i < bands.length; i++) {
+                    let pos = i, value = bands[i];
+                    if(bands[i] == null) continue;
+                    if((bandCt == 3 || bandCt == 4 || bandCt == 5) && i == 4) pos++;
+                    if(i == 3 && value == -1) value = 10;
+                    if(i == 3 && value == -2) value = 11;
+                    if(i == 4) value = tols.indexOf(bands[i]);
+                    else if(i == 5) value = tcs.indexOf(bands[i]);
+                    drawBand(pos+1, value);
+                }
+            }
+
+            function resistance() {
+                var toreturn = 0;
+                if(bands[1] == null) toreturn = bands[0];
+                else if(bands[2] == null) toreturn = bands[0]*10 + bands[1];
+                else toreturn = bands[0]*100 + bands[1]*10 + bands[2];
+                toreturn *= Math.pow(10,bands[3]);
+                return toreturn;
+            }
+
+            function modifyId() {
+                let label = "Nothing";
+                if(arrowIndex == 0) label = "Band #";
+                else if(arrowIndex == 1) label = "Base Value Digit #1";
+                else if(arrowIndex == 2) label = "Base Value Digit #2";
+                else if(arrowIndex == 3) label = "Base Value Digit #3";
+                else if(arrowIndex == 4) label = "Value Multiplier (Power of 10)";
+                else if(arrowIndex == 5 || (arrowIndex == 6 && (bandCt == 3 || bandCt == 4 || bandCt == 5))) label = "Value Tolerance";
+                else if(arrowIndex == 6) label = "Temperature Coefficient";
+                document.getElementsByClassName("bandct")[0].innerText = "Currently Modifying: " + label;
+            }
+            
+            function modifyOhm() {
+                let rstnce = resistance();
+                if(rstnce >= 1000000000000) rstnce = "" + rstnce/1000000000000 + "T";
+                else if(rstnce >= 1000000000) rstnce = "" + rstnce/1000000000 + "G";
+                if(rstnce >= 1000000) rstnce = "" + rstnce/1000000 + "M";
+                else if(rstnce >= 1000) rstnce = "" + rstnce/1000 + "k";
+                let ohms = "" + rstnce + "Ω";
+                if(bands[4] != null) ohms += " ±" + bands[4] + "%";
+                if(bands[5] != null) ohms += ", " + bands[5] + "ppm/K";
+                document.getElementById("resistance").innerText = ohms;
+            }
+
+            window.addEventListener("keydown", (event) => {
+                if(event.code.startsWith("Arrow")) event.preventDefault();
+                movement(event.code);
+            })
+            function movement(code) {
+                if(code == "ArrowRight") {
+                    let prevArrowIndex = arrowIndex;
+                    if(
+                        (bandCt == 4 && (arrowIndex == 2 || arrowIndex == 4)) ||
+                        (bandCt == 5 && arrowIndex == 4) ||
+                        (bandCt == 3 && arrowIndex == 4)
+                    ) {
+                        arrowIndex += 2;
+                    } else if(bandCt == 3 && arrowIndex == 1) {
+                        arrowIndex += 3;
+                    } else {
+                        arrowIndex++;
+                    }
+                    if(arrowIndex > 6) arrowIndex = 0;
+                    modifyId();
+                    let btnsprev = document.getElementsByClassName("bc" + prevArrowIndex);
+                    let btns = document.getElementsByClassName("bc" + arrowIndex);
+                    for(let i = 0; i < btnsprev.length; i++) btnsprev[i].style.visibility = "hidden";
+                    for(let i = 0; i < btns.length; i++) btns[i].style.visibility = "visible";
+                } else if(code == "ArrowLeft") {
+                    let prevArrowIndex = arrowIndex;
+                    if(
+                        (bandCt == 4 && (arrowIndex == 4 || arrowIndex == 6)) ||
+                        (bandCt == 5 && arrowIndex == 6) ||
+                        (bandCt == 3 && arrowIndex == 6)
+                    ) {
+                        arrowIndex -= 2;
+                    } else if(bandCt == 3 && arrowIndex == 4) {
+                        arrowIndex -= 3;
+                    } else {
+                        arrowIndex--;
+                    }
+                    if(arrowIndex < 0) arrowIndex = 6;
+                    modifyId();
+                    let btnsprev = document.getElementsByClassName("bc" + prevArrowIndex);
+                    let btns = document.getElementsByClassName("bc" + arrowIndex);
+                    for(let i = 0; i < btnsprev.length; i++) btnsprev[i].style.visibility = "hidden";
+                    for(let i = 0; i < btns.length; i++) btns[i].style.visibility = "visible";
+                } else if(code == "ArrowDown") {
+                    if(arrowIndex == 0) {
+                        if(bandCt > 3) {
+                            bandCt--;
+                            if(bandCt == 4) {
+                                bands[2] = null;
+                                bands[3]++;
+                            }
+                            else if(bandCt == 3) {
+                                bands[1] = null;
+                                bands[3]++;
+                            }
+                            else if(bandCt == 5) {
+                                bands[5] = null;
+                            }
+                            bandSwap(bandCt);
+                            document.getElementsByClassName("bandct")[1].innerText = "" + bandCt + " band resistor";
+                            modifyOhm();
+                        }
+                        return;
+                    }
+                    // Correctly handles the position differences of the resistor's tolerance when changing band colors/values
+                    // Also handles the modification of tolerance and temperature values, since these values don't range 0-9
+                    // Sets a tolerance case flag if tolerance is in an unusual position and is being modified
+                    let pos = arrowIndex-1;
+                    let toleranceCase = false;
+                    let tempCase = false;
+                    if(arrowIndex == 6 && (bandCt == 3 || bandCt == 4 || bandCt == 5)) {
+                        toleranceCase = true;
+                        pos--;
+                    }
+                    else if(arrowIndex == 5 && bandCt == 6) toleranceCase = true;
+                    else if(arrowIndex == 6 && bandCt == 6) tempCase = true;
+                    if(toleranceCase) {
+                        if(tols.indexOf(bands[pos]) <= 0) return;
+                        bands[pos] = tols[tols.indexOf(bands[pos])-1]
+                        while(bands[pos] == null) {
+                            bands[pos] = tols[tols.indexOf(bands[pos])-1]
+                        }
+                    }
+                    else if(tempCase) {
+                        if(tcs.indexOf(bands[pos]) <= 0) return;
+                        bands[pos] = tcs[tcs.indexOf(bands[pos])-1]
+                        while(bands[pos] == null) {
+                            bands[pos] = tcs[tcs.indexOf(bands[pos])-1]
+                        }
+                    } else if(bands[pos] == -1) {
+                        bands[pos] = 9;
+                    } else if(bands[pos] == -2) {
+                        bands[pos] = -1;
+                    }
+                    else if(bands[pos] <= 9 && bands[pos]>0) { // multiplier
+                        bands[pos]--;
+                    } else {
+                        return;
+                    }
+                    bandSwap(bandCt);
+                } else if(code == "ArrowUp") {
+                    if(arrowIndex == 0) {
+                        if(bandCt < 6) {
+                            bandCt++;
+                            if(bandCt == 4) {
+                                bands[1] = 0;
+                                bands[3]--;
+                            }
+                            else if(bandCt == 5) {
+                                bands[2] = 0;
+                                if(bands[3]>0) bands[3]--;
+                            }
+                            else if(bandCt == 6) bands[5] = 100;
+                            bandSwap(bandCt);
+                            document.getElementsByClassName("bandct")[1].innerText = "" + bandCt + " band resistor";
+                            modifyOhm();
+                        }
+                        return;
+                    }
+                    // Correctly handles the position differences of the resistor's tolerance when changing band colors/values
+                    // Also handles the modification of tolerance and temperature values, since these values don't range 0-9
+                    // Sets a tolerance case flag if tolerance is in an unusual position and is being modified
+                    let pos = arrowIndex-1;
+                    let toleranceCase = false;
+                    let tempCase = false;
+                    if(arrowIndex == 6 && (bandCt == 3 || bandCt == 4 || bandCt == 5)) {
+                        toleranceCase = true;
+                        pos--;
+                    }
+                    else if(arrowIndex == 5 && bandCt == 6) toleranceCase = true;
+                    else if(arrowIndex == 6 && bandCt == 6) tempCase = true;
+                    if(toleranceCase) {
+                        if(tols.indexOf(bands[pos])+1 >= tols.length) return;
+                        bands[pos] = tols[tols.indexOf(bands[pos])+1]
+                        while(bands[pos] == null) {
+                            bands[pos] = tols[tols.indexOf(bands[pos])+1]
+                        }
+                    }
+                    else if(tempCase) {
+                        if(tcs.indexOf(bands[pos])+1 >= 9) return;
+                        bands[pos] = tcs[tcs.indexOf(bands[pos])+1]
+                        while(bands[pos] == null) {
+                            bands[pos] = tcs[tcs.indexOf(bands[pos])+1]
+                        }
+                    }
+                    else if(pos >= 0 && pos <= 2) {
+                        if(bands[pos] >= 9) return;
+                        bands[pos]++;
+                    } else if(bands[pos] == 9) {
+                        bands[pos] = -1;
+                    } else if(bands[pos] == -1) {
+                        bands[pos] = -2;
+                    }
+                    else if(bands[pos] < 9 && bands[pos]>=0) { // multiplier
+                        bands[pos]++;
+                    } else {
+                        return;
+                    }
+                    bandSwap(bandCt);
+                }
+                modifyOhm();
+            }
+            
+            bandSwap(4);
+            drawBands();
+            modifyOhm();
         </script>
     </body>
 </html>
