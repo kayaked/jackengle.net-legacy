@@ -89,6 +89,13 @@
                 .atg {
                     display: none;
                 }
+                #cr {
+                    display: none;
+                }
+            }
+            #main {
+                width: 100%;
+                height: 28.125%;
             }
         </style>
     </head>
@@ -294,8 +301,8 @@
             const BANDS5 = "#73C2F2";
             const BANDS6 = "#006336";
             const BANDS = [BANDS3,BANDS4,BANDS5,BANDS6];
-            const resistorLength = 625;
-            const resistorHeight = 200;
+            var resistorLength = 625;
+            var resistorHeight = resistorLength*0.32;   
             // Main Resistor HTML5 Canvas Code.
             const can = document.getElementById("main");
             const ctx = can.getContext("2d");
