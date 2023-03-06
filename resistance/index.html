@@ -343,16 +343,16 @@
         <h2>WIP: Temperature Coefficient and Tolerance Meaning, Ohm Value to Color Codes</h2>
         <h2>Voltage and Current Division</h2>
         <p>Below is a set of resistors in series. In series like this, the current through each resistor is the same. They are connected/chained together along one path.</p>
-        <img src="series.png" style="padding-left:20%;padding-right:20%;height: auto;"/>
+        <img src="series.png" style="margin-left: auto; margin-right: auto;width: 50%;"/>
         <p>While in series, voltage is <strong>divided</strong> across resistors. Equation (1) demonstrates how this relationship works with R1 as an example. The equation involves dividing the resistance value in Ohms of the resistor in question by the sum of all series resistances. In this case, you divide 1kΩ by (2200 + 220 + 1000)Ω, then multiply the source voltage by this ratio. In our example, there is no power source, so be sure to analyze this for your own case.</p>
         <p>Equation (2) demonstrates how to combine the resistances shown above. The sum of all resistance values in Ohms gives the specification for an equivalent resistor, which ideally has the same function as these.</p>
-        <img src="seriesproperties.png" style="padding-left:30%;padding-right:30%;height: auto;"/>
+        <img src="seriesproperties.png" style="margin-left: auto; margin-right: auto;width: 40%;"/>
         <p>Shown below are resistors running in parallel with one another. Rather than connecting end-to-end, they flow in "split lanes" of the circuit and eventually rejoin together. The voltage across each resistor here is the same.</p>
-        <img src="parallel.png" style="padding-left:32%;padding-right:32%;height: auto;"/>
+        <img src="parallel.png" style="margin-left: auto; margin-right: auto;width: 30%;"/>
         <p>In parallel, unlike in series, <strong>current</strong> is divided between resistors. The relationship is similar to that of the series voltage division, but involves <strong>conductances</strong> instead of resistances. Conductance is the reciprocal value of resistance for each resistor, and its units are the Siemens (S) unit, equivalent to 1/Ω. It is represented by a G where resistance was represented by an R before.</p>
         <p>Below are two sets of equations (3) and (4), which have the same numbers because they are the same equations simply represented differently. Shown by Equation (3), the current across R1 is the current source multiplied by the ratio of R1's conductance to the sum of all conductances. When finding this sum, be sure to convert all resistances to conductances before adding them together!</p>
         <p>Equation (4) demonstrates how to ideally find the equivalent resistor for multiple in parallel with one another. The equivalent conductance for all resistors is the sum of their own conductance values. For our example, 1/220 + 1/1000 + 1/2200 gives the equivalent conductance for all three resistors. The equation below gives a more common and straightforward equation for R<sub>eq</sub>, showing the relationship between the parallel resistors and the equivalent counterpart.</p>
-        <img src="parallelproperties.png" style="padding-left: 28%; padding-right: 28%;height: auto;"/>
+        <img src="parallelproperties.png" style="margin-left: auto; margin-right: auto;width: 40%;"/>
         <br>
         <p id="cr">© 2023 Jack Engle</p>
         </div>
