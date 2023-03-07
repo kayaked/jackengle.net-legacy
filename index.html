@@ -27,6 +27,24 @@
                 <a href="https://github.com/kayaked/"><div style="background-image:url('github.png');" class="je-lnk"></div></a>
                 <a href="https://www.linkedin.com/in/john--engle"><div style="background-image:url('linkedin.png');" class="je-lnk"></div></a>
             </div>
+                
+            <p><br><br><strong style="font-size: 120%;">Personal Projects</strong>
+            <br><br>
+            <u><a href="resistance/" style="color:black;text-decoration:none;">Resistor Color Band Conversion (March 2023)</a></u>
+            <br>Simple tool I developed allowing a colored bands on a resistor to be easily input and converted to their reading in Ohms (Ω), and vice-versa. Site works with all band counts as well as temperature coefficients in ppm/K and tolerances in % error. The site also gives several sections full of important information about resistors, including their physical makeup and analysis techniques like voltage division.
+            <br><br>
+            <u><a href="https://github.com/kayaked/jailbrush" style="color:black;text-decoration:none;">Jailbrush iOS Theme Creator (October 2019)</a></u>
+            <br>Mainly used for legacy iOS devices, this tool allows simple iOS theme packages to be created for a respective jailbroken system. Made in Python and powered by PyQt 5, the goal of Jailbrush was to give a simple and versatile solution for packaging and installing a theme to an Apple mobile device. This project was inspired by my team's consistent issues with slow theme packaging, even when having experience doing so. The tool is capable of packaging a Debian archive with correct metadata/references and using SSH capabilities of the iOS device (usually OpenSSH or similar) to copy and install the theme package. This project is far from its maximum potential; the planned.txt file in the main repo gives major information about improvements.
+            <br><br>
+            <u><a style="color:black;text-decoration:none;">Trackrr Bot (December 2018)</a></u>
+            <br>Developed in Python, this bot was designed to serve information from over a dozen streaming services about songs, albums, artists, lyrics and more. The bot served its functionality mainly through Discord (as well as a very primitive web application) and searched music through Spotify, Apple Music, SoundCloud, Amazon Music, Deezer, Genius, Last.FM, Tidal, BandCamp, MusicBrainz and YouTube. The information was given to users on command with asynchronous tasks, allowing the bot to process several commands at once. Later, the project was made more generalized as its own API service for use by other developers. My role in this project was as a major early contributor to the version I described, and work was done in a small team led by <a href="https://github.com/ms7m" style="color:black;text-decoration:underline;">@ms7m</a>. I left the development team behind this concept in May of 2019, where other members were able to continue and expand on its concept.
+            <br><br>
+            <u>800x600 Video Card (February 2023)</u>
+            <br>Personal project involving a breadboarded circuit with integrated components outputting a valid VGA signal, aiming to display at 800x600 resolution. The basis for this design comes from Ben Eater, who designed a 100x75 VGA video card in the same manner. It uses a crystal oscillator clock to count up to 12 bits with ripple carried 4-bit counters, then is able to detect when certain values are reached in the counter to change states (e.g. sync pulses) and reset. The color values are stored and pulled from a 256kbit EEPROM device and fed through a screw terminal VGA adapter. The current design challenges include lack of inputs for the screen position detectors and for the EEPROM (and use of a slower clock). The former can be fixed using some boolean algebra and additional ICs, while the latter proves more challenging. Still in construction. Feel free to ask me where I purchased certain components from; the answer will usually be a vendor like Digi-Key, Circuit Specialists, Jameco or Amazon.
+            <br><br>
+            <u><a href="hanoi/" style="color:black;text-decoration:none;">The Great Hanoi Rat Hunt (December 2022)</a></u>
+            <br>Small pokemon-style video game based entirely around Michael Vann's <i>The Great Hanoi Rat Hunt</i> that I host and contributed heavily to. The game lasts for only 15 in-game days and is set in the French colonial-era city of Hanoi, Vietnam. Gameplay involves collecting rats and (more importantly) listening to historically relevant dialogue from both French and Vietnamese residents. There is too much historical context and backend to explain here, so read the book and play the game yourself!
+            </p>
         </div>
         <script>
             let es = document.getElementsByClassName("je-e");
