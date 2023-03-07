@@ -158,6 +158,12 @@
             #ppropi {
                 width: 40%;
             }
+            #rplai {
+                width: 15%;
+            }
+            #ohmsi {
+                width: 15%;
+            }
             .ig {
                 margin-left: auto;
                 margin-right: auto;
@@ -203,6 +209,12 @@
                 }
                 #ppropi {
                     width: 90%;
+                }
+                #rplai {
+                    width: 50%;
+                }
+                #ohmsi {
+                    width: 50%;
                 }
                 #udm {
                     display: inline-block;
@@ -401,7 +413,20 @@
               </tr>
             </tbody>
         </table>
-        <h2>WIP: Temperature Coefficient and Tolerance Meaning, Ohm Value to Color Codes</h2>
+        <h2>What is Resistance?</h2>
+        <p>Put simply, resistance describes how much an electrical component opposes the flow of electric current in its circuit line. The greater the resistance, the less electric current will flow, and vice-versa. Resistance is measured in Ohms (Ω) and is usually denoted by the symbol <strong>R</strong>.</p>
+        <h2>What is a Resistor Really?</h2>
+        <p>A fixed-value resistor, at the basic level, is made up of an outer coat, an insulating substance, and material chosen for its resistivity (material property describing its opposition to current flow, measured in Ω*m). There are many ways resistors can be produced, with the most common using a type of material film inside such as carbon, metal or a type of metallic oxide, surrounding an insulator like ceramic. This film is cut into a helix-like shape and closely attached around the insulator to increase the length of the resistor while keeping the cross-sectional area of the resistor small. Metal film resistors commonly use the alloy Nichrome (nickel and chromium) as resistive material inside. These kinds of resistors are often named thin film resistors. Thick film resistors, on the other hand, are a type of resistor using a much thicker conductor called Cermet, or Ceramic Metal. This allows their maximum resistance to be greater than their thin counterparts.</p>
+        <p>The equation</p>
+        <img src="rpla.png" class="ig" id="rplai"/>
+        <p>describes the relationship between  resistance and resistivity as well as the length/cross-sectional area of the resistor. This relationship demonstrates the importance of balancing material resistivity properly with internal length and cross-sectional area; as the length is cut into smaller pieces inside a resistor, the resistance also increases.</p>
+        <p>Other kinds of resistors include wirewound, foil and carbon composition resistors. Composition resistors, usually the cheapest format, use a solid mixture interior made of ceramic and carbon dust, or sometimes similar materials, to produce a balance between conductance and resistance. Wirewound resistors, rather than using a very fine film, use a wire (made of Nichrome or similar materials) wrapped around their insulator. When made with the right specifications, these can have properties such as very low tolerance or very high power ratings. However, due to their wire coil layout inside the resistor, they often develop higher quantities for inductance than other types. Foil resistors involve a very thin, cut layer of usually Nichrome foil around an insulator. They are used for high-precision purposes and a very stable resistance across changes in temperature.</p>
+        <p>Resistors come in all shapes; some are made for surface mounting on a printed circuit board, some for through hole wiring, and many others. There are also options to use for a non-fixed resistance; The potentiometer components allow for a variable resistance depending on their configuration. A common example would be a light-sensitive photoresistor. To learn more about the most commonly seen component in electronics, I encourage you to research any topics you would like!</p>
+        <h2>What is the Temperature Coefficient?</h2>
+        <p>Resistance for any resistor depends on the change in temperature; as temperature rises, resistance rises. This means that more current will be able to pass through a line if conditions are colder, as the resistance then is lessened. The specification for the change in temperature is determined by the Temperature Coefficient, in units <strong>ppm/K</strong>, or parts per million per Kelvin. For example, if the coefficient is 20 ppm/K, the resistance changes by about 20 * 10<sup>-6</sup> Ω per unit Kelvin change.</p>
+        <h2>Ohm's Law</h2>
+        <p>V is Voltage in volts (V), I is Current in amperes (A), and R is Resistance in ohms (Ω).</p>
+        <img src="ohms.png" class="ig" id="ohmsi"/>
         <h2>Voltage and Current Division</h2>
         <p>Below is a set of resistors in series. In series like this, the current through each resistor is the same. They are connected/chained together along one path.</p>
         <img src="series.png" class="ig" id="seriesi"/>
